@@ -44,76 +44,17 @@ namespace RandomsGeneAssistant
             List<Thing> banks = new List<Thing>(map.listerThings.ThingsMatching(ThingRequest.ForGroup(ThingRequestGroup.GenepackHolder)));
             if ((banks == null) || (banks.Count == 0)) { return; }
 
-            //  Init tracking vars
-            Dictionary<GeneDef, int> trackingStaus = new Dictionary<GeneDef, int>();
-            foreach (GeneDef gd in genepack.GeneSet.GenesListForReading)
-            {
-                trackingStaus.Add(gd, 0);
-                //  0 - Does not have
-                //  1 - Has but in pack with other genes
-                //  2 - Can replicate fully, don't buy
-            }
-            foreach (GeneDef gd in SettingsRef.ignoredGenes)
-            {
-                if (trackingStaus.ContainsKey(gd))
-                {
-                    trackingStaus[gd] = 2;
-                }
-            }
-            int minVal = trackingStaus.MinBy(kvp => kvp.Value).Value;
-
-            if (minVal < 2)
-            {
-                //  Loop through buildings
-                foreach (Thing b in banks)
-                {
-                    //  Get the genepacks
-                    CompGenepackContainer comp = b.TryGetComp<CompGenepackContainer>();
-                    foreach (Genepack gp in comp.ContainedGenepacks)
-                    {
-                        //  Scan each gene
-                        if (gp.GeneSet.GenesListForReading.TrueForAll(x => trackingStaus.ContainsKey(x)))
-                        {
-                            //  Scanned pack is a subset of trade pack
-                            foreach (GeneDef g in gp.GeneSet.GenesListForReading)
-                            {
-                                trackingStaus[g] = 2;
-                            }
-                        }
-                        else
-                        {
-                            //  Gene by gene comparison
-                            foreach (GeneDef g in gp.GeneSet.GenesListForReading)
-                            {
-                                if ((trackingStaus.ContainsKey(g)) && (trackingStaus[g] == 0))
-                                {
-                                    trackingStaus[g] = 1;
-                                }
-                            }
-                        }
-
-                        minVal = trackingStaus.MinBy(kvp => kvp.Value).Value;
-                        if (minVal == 2)
-                        {
-                            break;
-                        }
-                    }
-                    if (minVal == 2)
-                    {
-                        break;
-                    }
-                }
-            }
+            GenepackTradeStatus.Status status = GenepackTradeStatus.GetStatus(genepack, banks);
 
             Rect rect = mainRect;
             //  Draw our own background
             Rect rect1 = new Rect(rect.width - 75f, 0.0f, 75f, rect.height);
             Color c = SettingsRef.red;
-            if (minVal == 1)
+            if (status == GenepackTradeStatus.Status.Mixed)
             {
                 c = SettingsRef.yellow;
             }
-            else if (minVal == 2)
+            else if (status == GenepackTradeStatus.Status.Reproducible || status == GenepackTradeStatus.Status.Ignored)
             {
                 c = SettingsRef.green;
             }

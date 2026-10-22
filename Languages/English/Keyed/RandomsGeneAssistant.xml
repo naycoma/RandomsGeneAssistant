@@ -39,4 +39,10 @@
     <RandomsGeneAssistant.SellFromGenebanks>Sell from genebanks</RandomsGeneAssistant.SellFromGenebanks>
     <RandomsGeneAssistant.SellFromGenebanksDescription>Allows selling genepacks directly from genebanks.</RandomsGeneAssistant.SellFromGenebanksDescription>
     <RandomsGeneAssistant.SettingsCategory>Random's Gene Assistant</RandomsGeneAssistant.SettingsCategory>
+
+    <!-- Dynamic Trade Interface -->
+    <RandomsGeneAssistant.TradeStatusMissing>Contains a non-ignored gene missing from your genebanks.</RandomsGeneAssistant.TradeStatusMissing>
+    <RandomsGeneAssistant.TradeStatusMixed>Some needed genes are only in larger mixed genepacks.</RandomsGeneAssistant.TradeStatusMixed>
+    <RandomsGeneAssistant.TradeStatusReproducible>Every gene is reproducible from your genebanks or ignored.</RandomsGeneAssistant.TradeStatusReproducible>
+    <RandomsGeneAssistant.TradeStatusIgnored>All genes are ignored.</RandomsGeneAssistant.TradeStatusIgnored>
 </LanguageData>

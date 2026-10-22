@@ -64,12 +64,14 @@ jobs:
           mkdir -p package/About
           cp -R About/. package/About/
           cp -R Languages package/
+          cp LoadFolders.xml package/
 
           for dir in binaries/binary-*/; do
             ver="${dir#binaries/binary-}"
             dll=$(find "$dir" -type f -name '*.dll' -print -quit)
             mkdir -p "package/$ver/Assemblies"
             cp "$dll" "package/$ver/Assemblies/"
+            cp -R "$ver/Mods" "package/$ver/"
           done
 
       - name: Package

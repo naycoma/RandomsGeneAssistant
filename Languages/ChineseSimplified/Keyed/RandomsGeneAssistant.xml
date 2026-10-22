@@ -78,4 +78,14 @@
     <RandomsGeneAssistant.SellFromGenebanksDescription>允许直接从基因库出售基因组。</RandomsGeneAssistant.SellFromGenebanksDescription>
     <!-- EN: Random's Gene Assistant -->
     <RandomsGeneAssistant.SettingsCategory>Random's Gene Assistant</RandomsGeneAssistant.SettingsCategory>
+
+    <!-- Dynamic Trade Interface -->
+    <!-- EN: Contains a non-ignored gene missing from your genebanks. -->
+    <RandomsGeneAssistant.TradeStatusMissing>包含未忽略且基因库中尚未拥有的基因。</RandomsGeneAssistant.TradeStatusMissing>
+    <!-- EN: Some needed genes are only in larger mixed genepacks. -->
+    <RandomsGeneAssistant.TradeStatusMixed>部分所需基因仅存在于更大的混合基因组中。</RandomsGeneAssistant.TradeStatusMixed>
+    <!-- EN: Every gene is reproducible from your genebanks or ignored. -->
+    <RandomsGeneAssistant.TradeStatusReproducible>所有基因均可从基因库重新组合，或已被忽略。</RandomsGeneAssistant.TradeStatusReproducible>
+    <!-- EN: All genes are ignored. -->
+    <RandomsGeneAssistant.TradeStatusIgnored>所有基因均已忽略。</RandomsGeneAssistant.TradeStatusIgnored>
 </LanguageData>

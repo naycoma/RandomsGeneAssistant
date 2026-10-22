@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <ModMetaData>
-	<name>Random's Gene Assistant</name>
-	<author>RandomCoughdrop</author>
+	<name>Random's Gene Assistant - Forked</name>
+	<author>bluebird</author>
 	<supportedVersions>
 		<li>1.5</li>
 		<li>1.6</li>
 		<li>1.7</li>
 	</supportedVersions>
-	<packageId>rimworld.randomcoughdrop.geneassistant</packageId>
+	<packageId>bluebird.rimworld.randomcoughdrop.geneassistant</packageId>
 	<modDependencies>
 		<li>
 			<packageId>Ludeon.RimWorld.Biotech</packageId>
@@ -23,6 +23,10 @@
 	</modDependencies>
   <loadAfter>
 		<li>brrainz.harmony</li>
+		<li>zeracronius.dynamictradeinterface</li>
   </loadAfter>
+	<incompatibleWith>
+		<li>rimworld.randomcoughdrop.geneassistant</li>
+	</incompatibleWith>
 	<description>Adds a colored background to a pawn's gene list and traders, indicating extraction status.\nAdds a button to the gene assembler that ejects all duplicate genepacks.\nTweaks the sorting in the xenogerm menu for easier xenogerm creation.</description>
 </ModMetaData>

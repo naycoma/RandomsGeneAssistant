@@ -78,4 +78,14 @@
     <RandomsGeneAssistant.SellFromGenebanksDescription>遺伝子バンクから遺伝子パックを直接販売できるようにします.</RandomsGeneAssistant.SellFromGenebanksDescription>
     <!-- EN: Random's Gene Assistant -->
     <RandomsGeneAssistant.SettingsCategory>Random's Gene Assistant</RandomsGeneAssistant.SettingsCategory>
+
+    <!-- Dynamic Trade Interface -->
+    <!-- EN: Contains a non-ignored gene missing from your genebanks. -->
+    <RandomsGeneAssistant.TradeStatusMissing>無視対象ではなく,遺伝子バンクにもない遺伝子が含まれています.</RandomsGeneAssistant.TradeStatusMissing>
+    <!-- EN: Some needed genes are only in larger mixed genepacks. -->
+    <RandomsGeneAssistant.TradeStatusMixed>必要な遺伝子の一部は,より大きな混合遺伝子パックの中にしかありません.</RandomsGeneAssistant.TradeStatusMixed>
+    <!-- EN: Every gene is reproducible from your genebanks or ignored. -->
+    <RandomsGeneAssistant.TradeStatusReproducible>すべての遺伝子を遺伝子バンクから再現できるか,無視対象にしています.</RandomsGeneAssistant.TradeStatusReproducible>
+    <!-- EN: All genes are ignored. -->
+    <RandomsGeneAssistant.TradeStatusIgnored>すべての遺伝子を無視しています.</RandomsGeneAssistant.TradeStatusIgnored>
 </LanguageData>

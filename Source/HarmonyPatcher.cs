@@ -12,7 +12,7 @@ namespace RandomsGeneAssistant
     {
         static HarmonyPatcher()
         {
-            Harmony harmony = new Harmony("rimworld.randomcoughdrop.geneassistant");
+            Harmony harmony = new Harmony("bluebird.rimworld.randomcoughdrop.geneassistant");
             harmony.PatchAll();
             PatchTradeUIRevisited.HandlePatch(harmony);
             PatchGeneripperUI.HandlePatch(harmony);
