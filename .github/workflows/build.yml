@@ -1,0 +1,92 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+    tags:
+      - 'v*'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version:
+          - 1.5
+          - 1.6
+          - 1.7
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Build
+        run: dotnet build "${{ matrix.version }}/Source/mod.csproj" --configuration Release --nologo
+
+      - name: Verify binary
+        run: |
+          mapfile -t dlls < <(find "${{ matrix.version }}/Assemblies" -maxdepth 1 -type f -name '*.dll' -print)
+          test "${#dlls[@]}" -eq 1
+
+      - name: Upload binary
+        uses: actions/upload-artifact@v7
+        with:
+          name: binary-${{ matrix.version }}
+          path: ${{ matrix.version }}/Assemblies/*.dll
+          if-no-files-found: error
+
+  pack:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Download binaries
+        uses: actions/download-artifact@v8
+        with:
+          pattern: binary-*
+          path: binaries/
+
+      - name: Assemble package
+        run: |
+          mkdir -p package/About package/Common
+          cp -R About/. package/About/
+          cp LoadFolders.xml package/
+
+          for dir in binaries/binary-*/; do
+            ver="${dir#binaries/binary-}"
+            dll=$(find "$dir" -type f -name '*.dll' -print -quit)
+            mkdir -p "package/$ver/Assemblies"
+            cp "$dll" "package/$ver/Assemblies/"
+          done
+
+      - name: Package
+        run: |
+          cd package
+          zip -r "../${{ github.event.repository.name }}.zip" .
+
+      - name: Upload package
+        if: github.ref_type != 'tag'
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ github.event.repository.name }}
+          path: ${{ github.event.repository.name }}.zip
+          archive: false
+
+      - name: Create release
+        if: github.ref_type == 'tag'
+        uses: softprops/action-gh-release@v3
+        with:
+          files: ${{ github.event.repository.name }}.zip

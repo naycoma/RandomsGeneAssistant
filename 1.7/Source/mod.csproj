@@ -2,8 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
     <RootNamespace>RandomsGeneAssistant</RootNamespace>
-    <OutputPath>..\Assemblies\</OutputPath>
+    <AssemblyName>RandomsGeneAssistant</AssemblyName>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>../Assemblies/</OutputPath>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
@@ -11,7 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="../../Common/Source/*.cs" Link="Common\%(Filename)%(Extension)" />
+    <Compile Include="../../Common/Source/*.cs" Link="Common/%(Filename)%(Extension)" />
     <Compile Include="*.cs" />
   </ItemGroup>
 
