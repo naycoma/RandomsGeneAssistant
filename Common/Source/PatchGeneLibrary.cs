@@ -20,8 +20,8 @@ namespace RandomsGeneAssistant
         public static void GetGizmos_Postfix(Building_GeneAssembler __instance, ref IEnumerable<Gizmo> __result)
         {
             Command_Action commandActionEject = new Command_Action();
-            commandActionEject.defaultLabel = "View Library";
-            commandActionEject.defaultDesc = "Open the gene library.";
+            commandActionEject.defaultLabel = "RandomsGeneAssistant.ViewLibrary".Translate();
+            commandActionEject.defaultDesc = "RandomsGeneAssistant.ViewLibraryDescription".Translate();
             commandActionEject.icon = (Texture)ViewTex.Texture;
             commandActionEject.action = new Action(() => Find.WindowStack.Add(new Dialog_GeneLibrary(__instance)));
 
@@ -76,7 +76,7 @@ namespace RandomsGeneAssistant
             var rect = inRect;
             rect.xMin += 34f;
             Text.Font = GameFont.Medium;
-            Widgets.Label(rect, "Gene Library");
+            Widgets.Label(rect, "RandomsGeneAssistant.GeneLibrary".Translate());
             Text.Font = GameFont.Small;
             GUI.color = Color.white;
             inRect.yMin += 34f;
@@ -86,7 +86,7 @@ namespace RandomsGeneAssistant
             //  Cancel
             if (Widgets.ButtonText(
                     new Rect(inRect.xMin, inRect.yMax, CloseButSize.x,
-                        CloseButSize.y), "Cancel"))
+                        CloseButSize.y), "RandomsGeneAssistant.Cancel".Translate()))
             {
                 SettingsRef.RevertGeneIgnore();
                 PatchGeneLibrary.lastCloseWasButton = true;
@@ -96,43 +96,43 @@ namespace RandomsGeneAssistant
             //  Ignore
             if (Widgets.ButtonText(
                     new Rect(inRect.xMin + (CloseButSize.x + sep) * 1, inRect.yMax, CloseButSize.x,
-                        CloseButSize.y), "Ignore"))
+                        CloseButSize.y), "RandomsGeneAssistant.Ignore".Translate()))
             {
                 List<FloatMenuOption> options = new List<FloatMenuOption>();
-                options.Add(new FloatMenuOption("Cosmetic", () => { GeneToggleCosmetic(true); }));
-                options.Add(new FloatMenuOption("Positive", () => { GeneTogglePositive(true); }));
-                options.Add(new FloatMenuOption("Negative", () => { GeneToggleNegative(true); }));
-                options.Add(new FloatMenuOption("Archite", () => { GeneToggleArchite(true); }));
-                options.Add(new FloatMenuOption("All", () => { GeneToggleAll(true); }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.Cosmetic".Translate(), () => { GeneToggleCosmetic(true); }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.Positive".Translate(), () => { GeneTogglePositive(true); }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.Negative".Translate(), () => { GeneToggleNegative(true); }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.Archite".Translate(), () => { GeneToggleArchite(true); }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.All".Translate(), () => { GeneToggleAll(true); }));
                 Find.WindowStack.Add((Window)new FloatMenu(options));
             }
 
             //  Allow
             if (Widgets.ButtonText(
                     new Rect(inRect.xMin + (CloseButSize.x + sep) * 2, inRect.yMax, CloseButSize.x,
-                        CloseButSize.y), "Allow"))
+                        CloseButSize.y), "RandomsGeneAssistant.Allow".Translate()))
             {
                 List<FloatMenuOption> options = new List<FloatMenuOption>();
-                options.Add(new FloatMenuOption("Cosmetic", () => { GeneToggleCosmetic(false); }));
-                options.Add(new FloatMenuOption("Positive", () => { GeneTogglePositive(false); }));
-                options.Add(new FloatMenuOption("Negative", () => { GeneToggleNegative(false); }));
-                options.Add(new FloatMenuOption("Archite", () => { GeneToggleArchite(false); }));
-                options.Add(new FloatMenuOption("All", () => { GeneToggleAll(false); }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.Cosmetic".Translate(), () => { GeneToggleCosmetic(false); }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.Positive".Translate(), () => { GeneTogglePositive(false); }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.Negative".Translate(), () => { GeneToggleNegative(false); }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.Archite".Translate(), () => { GeneToggleArchite(false); }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.All".Translate(), () => { GeneToggleAll(false); }));
                 Find.WindowStack.Add((Window)new FloatMenu(options));
             }
 
             //  Hide Collected Genes
             if (Widgets.ButtonText(
                     new Rect(inRect.xMin + (CloseButSize.x + sep) * 3, inRect.yMax, CloseButSize.x,
-                        CloseButSize.y), "Switch Visibility"))
+                        CloseButSize.y), "RandomsGeneAssistant.SwitchVisibility".Translate()))
             {
                 List<FloatMenuOption> options = new List<FloatMenuOption>();
-                options.Add(new FloatMenuOption("Show all genes", () => { PatchGeneLibrary.hideState = 0; }));
-                options.Add(new FloatMenuOption("Hide fully acquired genes", () => { PatchGeneLibrary.hideState = 1; }));
-                options.Add(new FloatMenuOption("Hide fully and partially acquired genes", () => { PatchGeneLibrary.hideState = 2; }));
-                options.Add(new FloatMenuOption("Hide ignored genes", () => { PatchGeneLibrary.hideState = 3; }));
-                options.Add(new FloatMenuOption("Hide fully acquired and ignored genes", () => { PatchGeneLibrary.hideState = 4; }));
-                options.Add(new FloatMenuOption("Hide fully, partially acquired and ignored genes", () => { PatchGeneLibrary.hideState = 5; }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.ShowAllGenes".Translate(), () => { PatchGeneLibrary.hideState = 0; }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.HideFullyAcquiredGenes".Translate(), () => { PatchGeneLibrary.hideState = 1; }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.HideFullyPartiallyAcquiredGenes".Translate(), () => { PatchGeneLibrary.hideState = 2; }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.HideIgnoredGenes".Translate(), () => { PatchGeneLibrary.hideState = 3; }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.HideFullyAndIgnoredGenes".Translate(), () => { PatchGeneLibrary.hideState = 4; }));
+                options.Add(new FloatMenuOption("RandomsGeneAssistant.HideFullyPartiallyAndIgnoredGenes".Translate(), () => { PatchGeneLibrary.hideState = 5; }));
                 Find.WindowStack.Add((Window)new FloatMenu(options));
                 //PatchGeneLibrary.hideState = (PatchGeneLibrary.hideState + 1) % 6;
             }
@@ -140,7 +140,7 @@ namespace RandomsGeneAssistant
             //  Save and close
             if (Widgets.ButtonText(
                     new Rect(inRect.xMin + (CloseButSize.x + sep) * 4, inRect.yMax, CloseButSize.x,
-                        CloseButSize.y), "Save and Close"))
+                        CloseButSize.y), "RandomsGeneAssistant.SaveAndClose".Translate()))
             {
                 SettingsRef.CommitGeneIgnore();
                 PatchGeneLibrary.lastCloseWasButton = true;

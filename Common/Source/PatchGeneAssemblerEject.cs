@@ -21,8 +21,8 @@ namespace RandomsGeneAssistant
         public static void GetGizmos_Postfix(Building_GeneAssembler __instance, ref IEnumerable<Gizmo> __result)
         {
             Command_Action commandActionEject = new Command_Action();
-            commandActionEject.defaultLabel = "Eject Genepacks";
-            commandActionEject.defaultDesc = "Ejects all duplicate genepacks for ease of selling. Contains an option to eject all cosmetic genepacks.";
+            commandActionEject.defaultLabel = "RandomsGeneAssistant.EjectGenepacks".Translate();
+            commandActionEject.defaultDesc = "RandomsGeneAssistant.EjectGenepacksDescription".Translate();
             commandActionEject.icon = (Texture)EjectTex.Texture;
             commandActionEject.action = new Action(() => EjectionSelection(__instance));
 
@@ -34,9 +34,9 @@ namespace RandomsGeneAssistant
         public static void EjectionSelection(Building_GeneAssembler source)
         {
             List<FloatMenuOption> options = new List<FloatMenuOption>();
-            options.Add(new FloatMenuOption("Eject Duplicates", () => EjectDuplicateGenepacks(source)));
-            options.Add(new FloatMenuOption("Eject Cosmetic", () => EjectCosmeticGenepacks(source)));
-            options.Add(new FloatMenuOption("Eject Combined Genepacks", () => EjectCombinedGenepacks(source)));
+            options.Add(new FloatMenuOption("RandomsGeneAssistant.EjectDuplicates".Translate(), () => EjectDuplicateGenepacks(source)));
+            options.Add(new FloatMenuOption("RandomsGeneAssistant.EjectCosmetic".Translate(), () => EjectCosmeticGenepacks(source)));
+            options.Add(new FloatMenuOption("RandomsGeneAssistant.EjectCombinedGenepacks".Translate(), () => EjectCombinedGenepacks(source)));
             Find.WindowStack.Add((Window)new FloatMenu(options));
         }
 
@@ -100,11 +100,11 @@ namespace RandomsGeneAssistant
             //  Alert user
             if (markedForEjection.Count == 0)
             {
-                Messages.Message("No duplicate genepacks.", MessageTypeDefOf.NegativeEvent, false);
+                Messages.Message("RandomsGeneAssistant.NoDuplicateGenepacks".Translate(), MessageTypeDefOf.NegativeEvent, false);
             }
             else
             {
-                Messages.Message("Ejected " + markedForEjection.Count + " genepacks.", MessageTypeDefOf.PositiveEvent, false);
+                Messages.Message("RandomsGeneAssistant.EjectedGenepacks".Translate(markedForEjection.Count.Named("COUNT")), MessageTypeDefOf.PositiveEvent, false);
             }
         }
 
@@ -146,11 +146,11 @@ namespace RandomsGeneAssistant
             //  Alert user
             if (markedForEjection.Count == 0)
             {
-                Messages.Message("No cosmetic genepacks.", MessageTypeDefOf.NegativeEvent, false);
+                Messages.Message("RandomsGeneAssistant.NoCosmeticGenepacks".Translate(), MessageTypeDefOf.NegativeEvent, false);
             }
             else
             {
-                Messages.Message("Ejected " + markedForEjection.Count + " genepacks.", MessageTypeDefOf.PositiveEvent, false);
+                Messages.Message("RandomsGeneAssistant.EjectedGenepacks".Translate(markedForEjection.Count.Named("COUNT")), MessageTypeDefOf.PositiveEvent, false);
             }
         }
 
@@ -180,11 +180,11 @@ namespace RandomsGeneAssistant
             //  Alert user
             if (markedForEjection.Count == 0)
             {
-                Messages.Message("No combined genepacks.", MessageTypeDefOf.NegativeEvent, false);
+                Messages.Message("RandomsGeneAssistant.NoCombinedGenepacks".Translate(), MessageTypeDefOf.NegativeEvent, false);
             }
             else
             {
-                Messages.Message("Ejected " + markedForEjection.Count + " genepacks.", MessageTypeDefOf.PositiveEvent, false);
+                Messages.Message("RandomsGeneAssistant.EjectedGenepacks".Translate(markedForEjection.Count.Named("COUNT")), MessageTypeDefOf.PositiveEvent, false);
             }
         }
     }

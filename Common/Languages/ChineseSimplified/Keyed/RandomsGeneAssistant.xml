@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <!-- EN: Eject Genepacks -->
+    <RandomsGeneAssistant.EjectGenepacks>排出基因组</RandomsGeneAssistant.EjectGenepacks>
+    <!-- EN: Ejects all duplicate genepacks for ease of selling. Contains an option to eject all cosmetic genepacks. -->
+    <RandomsGeneAssistant.EjectGenepacksDescription>排出所有重复的基因组以便出售。也可以选择排出所有装饰性基因组。</RandomsGeneAssistant.EjectGenepacksDescription>
+    <!-- EN: Eject Duplicates -->
+    <RandomsGeneAssistant.EjectDuplicates>排出重复的基因组</RandomsGeneAssistant.EjectDuplicates>
+    <!-- EN: Eject Cosmetic -->
+    <RandomsGeneAssistant.EjectCosmetic>排出装饰性基因组</RandomsGeneAssistant.EjectCosmetic>
+    <!-- EN: Eject Combined Genepacks -->
+    <RandomsGeneAssistant.EjectCombinedGenepacks>排出复合基因组</RandomsGeneAssistant.EjectCombinedGenepacks>
+    <!-- EN: No duplicate genepacks. -->
+    <RandomsGeneAssistant.NoDuplicateGenepacks>没有重复的基因组。</RandomsGeneAssistant.NoDuplicateGenepacks>
+    <!-- EN: No cosmetic genepacks. -->
+    <RandomsGeneAssistant.NoCosmeticGenepacks>没有装饰性基因组。</RandomsGeneAssistant.NoCosmeticGenepacks>
+    <!-- EN: No combined genepacks. -->
+    <RandomsGeneAssistant.NoCombinedGenepacks>没有复合基因组。</RandomsGeneAssistant.NoCombinedGenepacks>
+    <!-- EN: Ejected {COUNT} genepacks. -->
+    <RandomsGeneAssistant.EjectedGenepacks>已排出 {COUNT} 个基因组。</RandomsGeneAssistant.EjectedGenepacks>
+    <!-- EN: View Library -->
+    <RandomsGeneAssistant.ViewLibrary>查看基因库</RandomsGeneAssistant.ViewLibrary>
+    <!-- EN: Open the gene library. -->
+    <RandomsGeneAssistant.ViewLibraryDescription>打开基因库。</RandomsGeneAssistant.ViewLibraryDescription>
+    <!-- EN: Gene Library -->
+    <RandomsGeneAssistant.GeneLibrary>基因库</RandomsGeneAssistant.GeneLibrary>
+    <!-- EN: Cancel -->
+    <RandomsGeneAssistant.Cancel>取消</RandomsGeneAssistant.Cancel>
+    <!-- EN: Ignore -->
+    <RandomsGeneAssistant.Ignore>忽略</RandomsGeneAssistant.Ignore>
+    <!-- EN: Allow -->
+    <RandomsGeneAssistant.Allow>允许</RandomsGeneAssistant.Allow>
+    <!-- EN: Cosmetic -->
+    <RandomsGeneAssistant.Cosmetic>装饰</RandomsGeneAssistant.Cosmetic>
+    <!-- EN: Positive -->
+    <RandomsGeneAssistant.Positive>正面</RandomsGeneAssistant.Positive>
+    <!-- EN: Negative -->
+    <RandomsGeneAssistant.Negative>负面</RandomsGeneAssistant.Negative>
+    <!-- EN: Archite -->
+    <RandomsGeneAssistant.Archite>超凡</RandomsGeneAssistant.Archite>
+    <!-- EN: All -->
+    <RandomsGeneAssistant.All>全部</RandomsGeneAssistant.All>
+    <!-- EN: Switch Visibility -->
+    <RandomsGeneAssistant.SwitchVisibility>切换显示</RandomsGeneAssistant.SwitchVisibility>
+    <!-- EN: Show all genes -->
+    <RandomsGeneAssistant.ShowAllGenes>显示全部基因</RandomsGeneAssistant.ShowAllGenes>
+    <!-- EN: Hide fully acquired genes -->
+    <RandomsGeneAssistant.HideFullyAcquiredGenes>隐藏已完全获得的基因</RandomsGeneAssistant.HideFullyAcquiredGenes>
+    <!-- EN: Hide fully and partially acquired genes -->
+    <RandomsGeneAssistant.HideFullyPartiallyAcquiredGenes>隐藏已完全和部分获得的基因</RandomsGeneAssistant.HideFullyPartiallyAcquiredGenes>
+    <!-- EN: Hide ignored genes -->
+    <RandomsGeneAssistant.HideIgnoredGenes>隐藏已忽略的基因</RandomsGeneAssistant.HideIgnoredGenes>
+    <!-- EN: Hide fully acquired and ignored genes -->
+    <RandomsGeneAssistant.HideFullyAndIgnoredGenes>隐藏已完全获得和已忽略的基因</RandomsGeneAssistant.HideFullyAndIgnoredGenes>
+    <!-- EN: Hide fully, partially acquired and ignored genes -->
+    <RandomsGeneAssistant.HideFullyPartiallyAndIgnoredGenes>隐藏已完全、部分获得和已忽略的基因</RandomsGeneAssistant.HideFullyPartiallyAndIgnoredGenes>
+    <!-- EN: Save and Close -->
+    <RandomsGeneAssistant.SaveAndClose>保存并关闭</RandomsGeneAssistant.SaveAndClose>
+    <!-- EN: Filled Slots: {FILLED}/{TOTAL} -->
+    <RandomsGeneAssistant.FilledSlots>已用槽位: {FILLED}/{TOTAL}</RandomsGeneAssistant.FilledSlots>
+    <!-- EN: Override xenogerm sorting -->
+    <RandomsGeneAssistant.OverrideXenogermSorting>调整基因组排序</RandomsGeneAssistant.OverrideXenogermSorting>
+    <!-- EN: Sorts the genes in the gene assembler menu by the most impactful gene in a set, rather than the first gene. -->
+    <RandomsGeneAssistant.OverrideXenogermSortingDescription>在基因装配器菜单中，按照每个基因组中复杂度最高的基因排序，而不是按第一个基因排序。</RandomsGeneAssistant.OverrideXenogermSortingDescription>
+    <!-- EN: Sort single genes first -->
+    <RandomsGeneAssistant.SortSingleGenesFirst>单基因优先排序</RandomsGeneAssistant.SortSingleGenesFirst>
+    <!-- EN: Sorts single genes to be first in the gene assembler. -->
+    <RandomsGeneAssistant.SortSingleGenesFirstDescription>在基因装配器中将单基因排在前面。</RandomsGeneAssistant.SortSingleGenesFirstDescription>
+    <!-- EN: Background Saturation: {PERCENT}% -->
+    <RandomsGeneAssistant.BackgroundSaturation>背景饱和度: {PERCENT}%</RandomsGeneAssistant.BackgroundSaturation>
+    <!-- EN: Alternate colors -->
+    <RandomsGeneAssistant.AlternateColors>替代配色</RandomsGeneAssistant.AlternateColors>
+    <!-- EN: Activates an alternate color scheme. -->
+    <RandomsGeneAssistant.AlternateColorsDescription>启用替代配色方案。</RandomsGeneAssistant.AlternateColorsDescription>
+    <!-- EN: Sell from genebanks -->
+    <RandomsGeneAssistant.SellFromGenebanks>从基因库出售</RandomsGeneAssistant.SellFromGenebanks>
+    <!-- EN: Allows selling genepacks directly from genebanks. -->
+    <RandomsGeneAssistant.SellFromGenebanksDescription>允许直接从基因库出售基因组。</RandomsGeneAssistant.SellFromGenebanksDescription>
+    <!-- EN: Random's Gene Assistant -->
+    <RandomsGeneAssistant.SettingsCategory>Random's Gene Assistant</RandomsGeneAssistant.SettingsCategory>
+</LanguageData>

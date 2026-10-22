@@ -59,14 +59,15 @@ namespace RandomsGeneAssistant
         {
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
-            listingStandard.CheckboxLabeled("Override xenogerm sorting", ref settings.overrideSorting, "Sorts the genes in the gene assembler menu by the most impactful gene in a set, rather than the first gene.");
-            listingStandard.CheckboxLabeled("Sort single genes first", ref settings.singlesFirst, "Sorts single genes to be first in the gene assembler.");
+            listingStandard.CheckboxLabeled("RandomsGeneAssistant.OverrideXenogermSorting".Translate(), ref settings.overrideSorting, "RandomsGeneAssistant.OverrideXenogermSortingDescription".Translate());
+            listingStandard.CheckboxLabeled("RandomsGeneAssistant.SortSingleGenesFirst".Translate(), ref settings.singlesFirst, "RandomsGeneAssistant.SortSingleGenesFirstDescription".Translate());
 
-            listingStandard.Label($"Background Saturation: {(int) Math.Round(settings.backgroundSaturation * 100)}%");
+            listingStandard.Label("RandomsGeneAssistant.BackgroundSaturation".Translate(
+                ((int) Math.Round(settings.backgroundSaturation * 100)).Named("PERCENT")));
             settings.backgroundSaturation = listingStandard.Slider(settings.backgroundSaturation, 0f, 1f);
 
-            listingStandard.CheckboxLabeled("Alternate colors", ref settings.overrideColors, "Activates an alternate color scheme.");
-            listingStandard.CheckboxLabeled("Sell from genebanks", ref settings.sellFromGeneBanks, "Allows selling genepacks directly from genebanks.");
+            listingStandard.CheckboxLabeled("RandomsGeneAssistant.AlternateColors".Translate(), ref settings.overrideColors, "RandomsGeneAssistant.AlternateColorsDescription".Translate());
+            listingStandard.CheckboxLabeled("RandomsGeneAssistant.SellFromGenebanks".Translate(), ref settings.sellFromGeneBanks, "RandomsGeneAssistant.SellFromGenebanksDescription".Translate());
 
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);
@@ -74,7 +75,7 @@ namespace RandomsGeneAssistant
 
         public override string SettingsCategory()
         {
-            return "Random's Gene Assistant";
+            return "RandomsGeneAssistant.SettingsCategory".Translate();
         }
 
         public static bool ToggleGeneIgnore(GeneDef gene)

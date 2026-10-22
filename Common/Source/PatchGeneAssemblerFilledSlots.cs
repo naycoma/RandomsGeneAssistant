@@ -18,7 +18,6 @@ namespace RandomsGeneAssistant
             int filled = 0;
             int total = 0;
 
-            //  
             List<Thing> connectedFacilities = __instance.ConnectedFacilities;
             if (connectedFacilities != null)
             {
@@ -33,7 +32,7 @@ namespace RandomsGeneAssistant
                 }
             }
 
-            string filledSlots = "Filled Slots: " + filled + "/" + total;
+            string filledSlots = "RandomsGeneAssistant.FilledSlots".Translate(filled.Named("FILLED"), total.Named("TOTAL"));
             string result = __result?.TrimEnd('\r', '\n');
             __result = string.IsNullOrEmpty(result)
                 ? filledSlots

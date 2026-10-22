@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <RandomsGeneAssistant.EjectGenepacks>Eject Genepacks</RandomsGeneAssistant.EjectGenepacks>
+    <RandomsGeneAssistant.EjectGenepacksDescription>Ejects all duplicate genepacks for ease of selling. Contains an option to eject all cosmetic genepacks.</RandomsGeneAssistant.EjectGenepacksDescription>
+    <RandomsGeneAssistant.EjectDuplicates>Eject Duplicates</RandomsGeneAssistant.EjectDuplicates>
+    <RandomsGeneAssistant.EjectCosmetic>Eject Cosmetic</RandomsGeneAssistant.EjectCosmetic>
+    <RandomsGeneAssistant.EjectCombinedGenepacks>Eject Combined Genepacks</RandomsGeneAssistant.EjectCombinedGenepacks>
+    <RandomsGeneAssistant.NoDuplicateGenepacks>No duplicate genepacks.</RandomsGeneAssistant.NoDuplicateGenepacks>
+    <RandomsGeneAssistant.NoCosmeticGenepacks>No cosmetic genepacks.</RandomsGeneAssistant.NoCosmeticGenepacks>
+    <RandomsGeneAssistant.NoCombinedGenepacks>No combined genepacks.</RandomsGeneAssistant.NoCombinedGenepacks>
+    <RandomsGeneAssistant.EjectedGenepacks>Ejected {COUNT} genepacks.</RandomsGeneAssistant.EjectedGenepacks>
+    <RandomsGeneAssistant.ViewLibrary>View Library</RandomsGeneAssistant.ViewLibrary>
+    <RandomsGeneAssistant.ViewLibraryDescription>Open the gene library.</RandomsGeneAssistant.ViewLibraryDescription>
+    <RandomsGeneAssistant.GeneLibrary>Gene Library</RandomsGeneAssistant.GeneLibrary>
+    <RandomsGeneAssistant.Cancel>Cancel</RandomsGeneAssistant.Cancel>
+    <RandomsGeneAssistant.Ignore>Ignore</RandomsGeneAssistant.Ignore>
+    <RandomsGeneAssistant.Allow>Allow</RandomsGeneAssistant.Allow>
+    <RandomsGeneAssistant.Cosmetic>Cosmetic</RandomsGeneAssistant.Cosmetic>
+    <RandomsGeneAssistant.Positive>Positive</RandomsGeneAssistant.Positive>
+    <RandomsGeneAssistant.Negative>Negative</RandomsGeneAssistant.Negative>
+    <RandomsGeneAssistant.Archite>Archite</RandomsGeneAssistant.Archite>
+    <RandomsGeneAssistant.All>All</RandomsGeneAssistant.All>
+    <RandomsGeneAssistant.SwitchVisibility>Switch Visibility</RandomsGeneAssistant.SwitchVisibility>
+    <RandomsGeneAssistant.ShowAllGenes>Show all genes</RandomsGeneAssistant.ShowAllGenes>
+    <RandomsGeneAssistant.HideFullyAcquiredGenes>Hide fully acquired genes</RandomsGeneAssistant.HideFullyAcquiredGenes>
+    <RandomsGeneAssistant.HideFullyPartiallyAcquiredGenes>Hide fully and partially acquired genes</RandomsGeneAssistant.HideFullyPartiallyAcquiredGenes>
+    <RandomsGeneAssistant.HideIgnoredGenes>Hide ignored genes</RandomsGeneAssistant.HideIgnoredGenes>
+    <RandomsGeneAssistant.HideFullyAndIgnoredGenes>Hide fully acquired and ignored genes</RandomsGeneAssistant.HideFullyAndIgnoredGenes>
+    <RandomsGeneAssistant.HideFullyPartiallyAndIgnoredGenes>Hide fully, partially acquired and ignored genes</RandomsGeneAssistant.HideFullyPartiallyAndIgnoredGenes>
+    <RandomsGeneAssistant.SaveAndClose>Save and Close</RandomsGeneAssistant.SaveAndClose>
+    <RandomsGeneAssistant.FilledSlots>Filled Slots: {FILLED}/{TOTAL}</RandomsGeneAssistant.FilledSlots>
+    <RandomsGeneAssistant.OverrideXenogermSorting>Override xenogerm sorting</RandomsGeneAssistant.OverrideXenogermSorting>
+    <RandomsGeneAssistant.OverrideXenogermSortingDescription>Sorts the genes in the gene assembler menu by the most impactful gene in a set, rather than the first gene.</RandomsGeneAssistant.OverrideXenogermSortingDescription>
+    <RandomsGeneAssistant.SortSingleGenesFirst>Sort single genes first</RandomsGeneAssistant.SortSingleGenesFirst>
+    <RandomsGeneAssistant.SortSingleGenesFirstDescription>Sorts single genes to be first in the gene assembler.</RandomsGeneAssistant.SortSingleGenesFirstDescription>
+    <RandomsGeneAssistant.BackgroundSaturation>Background Saturation: {PERCENT}%</RandomsGeneAssistant.BackgroundSaturation>
+    <RandomsGeneAssistant.AlternateColors>Alternate colors</RandomsGeneAssistant.AlternateColors>
+    <RandomsGeneAssistant.AlternateColorsDescription>Activates an alternate color scheme.</RandomsGeneAssistant.AlternateColorsDescription>
+    <RandomsGeneAssistant.SellFromGenebanks>Sell from genebanks</RandomsGeneAssistant.SellFromGenebanks>
+    <RandomsGeneAssistant.SellFromGenebanksDescription>Allows selling genepacks directly from genebanks.</RandomsGeneAssistant.SellFromGenebanksDescription>
+    <RandomsGeneAssistant.SettingsCategory>Random's Gene Assistant</RandomsGeneAssistant.SettingsCategory>
+</LanguageData>

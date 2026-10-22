@@ -63,6 +63,7 @@ jobs:
         run: |
           mkdir -p package/About package/Common
           cp -R About/. package/About/
+          cp -R Common/Languages package/Common/
           cp LoadFolders.xml package/
 
           for dir in binaries/binary-*/; do
