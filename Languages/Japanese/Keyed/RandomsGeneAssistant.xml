@@ -3,19 +3,19 @@
     <!-- EN: Eject Genepacks -->
     <RandomsGeneAssistant.EjectGenepacks>遺伝子パックを排出</RandomsGeneAssistant.EjectGenepacks>
     <!-- EN: Ejects all duplicate genepacks for ease of selling. Contains an option to eject all cosmetic genepacks. -->
-    <RandomsGeneAssistant.EjectGenepacksDescription>販売しやすくするため,重複する遺伝子パックを排出します.コスメティック遺伝子パックをすべて排出する選択肢もあります.</RandomsGeneAssistant.EjectGenepacksDescription>
+    <RandomsGeneAssistant.EjectGenepacksDescription>販売しやすくするため,重複する遺伝子パックを排出します.外見遺伝子パックをすべて排出する選択肢もあります.</RandomsGeneAssistant.EjectGenepacksDescription>
     <!-- EN: Eject Duplicates -->
-    <RandomsGeneAssistant.EjectDuplicates>重複を排出</RandomsGeneAssistant.EjectDuplicates>
+    <RandomsGeneAssistant.EjectDuplicates>重複遺伝子パックを排出</RandomsGeneAssistant.EjectDuplicates>
     <!-- EN: Eject Cosmetic -->
-    <RandomsGeneAssistant.EjectCosmetic>コスメティックを排出</RandomsGeneAssistant.EjectCosmetic>
+    <RandomsGeneAssistant.EjectCosmetic>外見遺伝子パックを排出</RandomsGeneAssistant.EjectCosmetic>
     <!-- EN: Eject Combined Genepacks -->
-    <RandomsGeneAssistant.EjectCombinedGenepacks>複合遺伝子パックを排出</RandomsGeneAssistant.EjectCombinedGenepacks>
+    <RandomsGeneAssistant.EjectCombinedGenepacks>混合遺伝子パックを排出</RandomsGeneAssistant.EjectCombinedGenepacks>
     <!-- EN: No duplicate genepacks. -->
     <RandomsGeneAssistant.NoDuplicateGenepacks>重複する遺伝子パックはありません.</RandomsGeneAssistant.NoDuplicateGenepacks>
     <!-- EN: No cosmetic genepacks. -->
-    <RandomsGeneAssistant.NoCosmeticGenepacks>コスメティック遺伝子パックはありません.</RandomsGeneAssistant.NoCosmeticGenepacks>
+    <RandomsGeneAssistant.NoCosmeticGenepacks>外見遺伝子パックはありません.</RandomsGeneAssistant.NoCosmeticGenepacks>
     <!-- EN: No combined genepacks. -->
-    <RandomsGeneAssistant.NoCombinedGenepacks>複合遺伝子パックはありません.</RandomsGeneAssistant.NoCombinedGenepacks>
+    <RandomsGeneAssistant.NoCombinedGenepacks>混合遺伝子パックはありません.</RandomsGeneAssistant.NoCombinedGenepacks>
     <!-- EN: Ejected {COUNT} genepacks. -->
     <RandomsGeneAssistant.EjectedGenepacks>{COUNT}個の遺伝子パックを排出しました.</RandomsGeneAssistant.EjectedGenepacks>
     <!-- EN: View Library -->
@@ -31,7 +31,7 @@
     <!-- EN: Allow -->
     <RandomsGeneAssistant.Allow>許可</RandomsGeneAssistant.Allow>
     <!-- EN: Cosmetic -->
-    <RandomsGeneAssistant.Cosmetic>コスメティック</RandomsGeneAssistant.Cosmetic>
+    <RandomsGeneAssistant.Cosmetic>外見</RandomsGeneAssistant.Cosmetic>
     <!-- EN: Positive -->
     <RandomsGeneAssistant.Positive>有利</RandomsGeneAssistant.Positive>
     <!-- EN: Negative -->
@@ -45,15 +45,15 @@
     <!-- EN: Show all genes -->
     <RandomsGeneAssistant.ShowAllGenes>すべての遺伝子を表示</RandomsGeneAssistant.ShowAllGenes>
     <!-- EN: Hide fully acquired genes -->
-    <RandomsGeneAssistant.HideFullyAcquiredGenes>取得済みの遺伝子を非表示</RandomsGeneAssistant.HideFullyAcquiredGenes>
+    <RandomsGeneAssistant.HideFullyAcquiredGenes>単体取得済みの遺伝子を非表示</RandomsGeneAssistant.HideFullyAcquiredGenes>
     <!-- EN: Hide fully and partially acquired genes -->
-    <RandomsGeneAssistant.HideFullyPartiallyAcquiredGenes>完全取得・一部取得済みの遺伝子を非表示</RandomsGeneAssistant.HideFullyPartiallyAcquiredGenes>
+    <RandomsGeneAssistant.HideFullyPartiallyAcquiredGenes>単体取得・混合取得済みの遺伝子を非表示</RandomsGeneAssistant.HideFullyPartiallyAcquiredGenes>
     <!-- EN: Hide ignored genes -->
     <RandomsGeneAssistant.HideIgnoredGenes>無視した遺伝子を非表示</RandomsGeneAssistant.HideIgnoredGenes>
     <!-- EN: Hide fully acquired and ignored genes -->
-    <RandomsGeneAssistant.HideFullyAndIgnoredGenes>取得済み・無視した遺伝子を非表示</RandomsGeneAssistant.HideFullyAndIgnoredGenes>
+    <RandomsGeneAssistant.HideFullyAndIgnoredGenes>単体取得・無視した遺伝子を非表示</RandomsGeneAssistant.HideFullyAndIgnoredGenes>
     <!-- EN: Hide fully, partially acquired and ignored genes -->
-    <RandomsGeneAssistant.HideFullyPartiallyAndIgnoredGenes>完全取得・一部取得済み・無視した遺伝子を非表示</RandomsGeneAssistant.HideFullyPartiallyAndIgnoredGenes>
+    <RandomsGeneAssistant.HideFullyPartiallyAndIgnoredGenes>単体取得・混合取得済み・無視した遺伝子を非表示</RandomsGeneAssistant.HideFullyPartiallyAndIgnoredGenes>
     <!-- EN: Save and Close -->
     <RandomsGeneAssistant.SaveAndClose>保存して閉じる</RandomsGeneAssistant.SaveAndClose>
     <!-- EN: Filled Slots: {FILLED}/{TOTAL} -->
@@ -63,9 +63,9 @@
     <!-- EN: Sorts the genes in the gene assembler menu by the most impactful gene in a set, rather than the first gene. -->
     <RandomsGeneAssistant.OverrideXenogermSortingDescription>遺伝子アセンブラメニューで,セット内の最初の遺伝子ではなく,影響が最も大きい遺伝子を基準に並び替えます.</RandomsGeneAssistant.OverrideXenogermSortingDescription>
     <!-- EN: Sort single genes first -->
-    <RandomsGeneAssistant.SortSingleGenesFirst>単独遺伝子を先に並べる</RandomsGeneAssistant.SortSingleGenesFirst>
+    <RandomsGeneAssistant.SortSingleGenesFirst>単体遺伝子を先に並べる</RandomsGeneAssistant.SortSingleGenesFirst>
     <!-- EN: Sorts single genes to be first in the gene assembler. -->
-    <RandomsGeneAssistant.SortSingleGenesFirstDescription>遺伝子アセンブラで単独遺伝子を先頭に並べます.</RandomsGeneAssistant.SortSingleGenesFirstDescription>
+    <RandomsGeneAssistant.SortSingleGenesFirstDescription>遺伝子アセンブラで単体遺伝子を先頭に並べます.</RandomsGeneAssistant.SortSingleGenesFirstDescription>
     <!-- EN: Background Saturation: {PERCENT}% -->
     <RandomsGeneAssistant.BackgroundSaturation>背景の彩度: {PERCENT}%</RandomsGeneAssistant.BackgroundSaturation>
     <!-- EN: Alternate colors -->
