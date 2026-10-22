@@ -13,7 +13,7 @@ namespace RandomsGeneAssistant
     class Tools
     {
         private static readonly MethodInfo m_getParentContainer = AccessTools.PropertyGetter(typeof(Genepack), "ParentContainer");
-        private static readonly FastInvokeHandler getParentContainer = MethodInvoker.GetHandler(m_getParentContainer);
+        private static readonly FastInvokeHandler getParentContainer = HarmonyLib.MethodInvoker.GetHandler(m_getParentContainer);
 
         public static IEnumerable<Thing> FilterGeneBanks(IEnumerable<Thing> source)
         {

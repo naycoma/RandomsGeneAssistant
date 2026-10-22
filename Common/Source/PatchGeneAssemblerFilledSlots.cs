@@ -33,7 +33,11 @@ namespace RandomsGeneAssistant
                 }
             }
 
-            __result += "\nFilled Slots: " + filled + "/" + total;
+            string filledSlots = "Filled Slots: " + filled + "/" + total;
+            string result = __result?.TrimEnd('\r', '\n');
+            __result = string.IsNullOrEmpty(result)
+                ? filledSlots
+                : result + "\n" + filledSlots;
         }
     }
 }
