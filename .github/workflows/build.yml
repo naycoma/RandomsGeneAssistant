@@ -61,10 +61,9 @@ jobs:
 
       - name: Assemble package
         run: |
-          mkdir -p package/About package/Common
+          mkdir -p package/About
           cp -R About/. package/About/
-          cp -R Common/Languages package/Common/
-          cp LoadFolders.xml package/
+          cp -R Languages package/
 
           for dir in binaries/binary-*/; do
             ver="${dir#binaries/binary-}"
