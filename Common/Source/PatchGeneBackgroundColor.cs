@@ -93,9 +93,7 @@ namespace RandomsGeneAssistant
             doBackground = false;
         }
 
-        [HarmonyPatch(typeof(GeneUIUtility), "DrawGeneBasics")]
-        [HarmonyPrefix]
-        public static void DrawGeneBasics_Prefix(Gene gene, Rect geneRect, GeneType geneType, ref bool doBackground, bool clickable, bool overridden)
+        public static void DrawGeneBasics(GeneDef geneDef, Rect geneRect, GeneType geneType, ref bool doBackground, bool clickable, bool overridden)
         {
             //  Early returns
             if (!doBackground) { return; }
@@ -109,7 +107,7 @@ namespace RandomsGeneAssistant
             //  Init tracking vars
             int findQuality = 0;
 
-            if (SettingsRef.ignoredGenes.Contains(gene.def))
+            if (SettingsRef.ignoredGenes.Contains(geneDef))
             {
                 findQuality = -1;
             }
@@ -125,7 +123,7 @@ namespace RandomsGeneAssistant
                         //  Scan each gene
                         foreach (GeneDef g in gp.GeneSet.GenesListForReading)
                         {
-                            if (g.ToString() == gene.def.ToString())
+                            if (g == geneDef)
                             {
                                 findQuality = gp.GeneSet.GenesListForReading.Count == 1 ? 2 : 1;
                             }
